@@ -7,7 +7,7 @@ M221 S100 ;Reset Flowrate
 G90 ; absolute xyz mode
 M92 X80.00 Y80.00 Z400.00 E137.9
 M301 P27.87 I2.70 D71.91
-M900 K0.07
+M900 K0
 M500
 
 M117 Getting the bed up to temp!
@@ -23,7 +23,7 @@ M117 Getting the extruder up to temp!
 M104 S{material_print_temperature_layer_0} ; Set Extruder temperature
 M109 S{material_print_temperature_layer_0} ; Wait for Extruder temperature
 G1 Z10.0 F1000 ; move z up little to prevent scratching of surface
-G1 X1.0 Y20 Z0.3 F1000.0 ; move to start-line position
+G1 X3.5 Y20 Z0.3 F2000.0 ; move to start-line position
 M117 LET THE PURGE BEGIN!
 G1 X3.5 Y200.0 Z0.3 F1000.0 E15 ; draw 1st line
 G1 X3.9 Y200.0 Z0.3 F1000.0 ; move to side a little
