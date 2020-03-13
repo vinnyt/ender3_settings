@@ -15,9 +15,12 @@ M190 S{material_bed_temperature_layer_0} ; Wait for Heat Bed temperature
 M117 Pre-heating the extruder!
 M104 S200; start warming extruder to 200
 G28 ; Home all axes
+G28 X Y ; Home all axes
 G92 X-5.0 Y-10.0 ; set home offsets
 M117 Auto bed-level GO!
 G29 ; Auto bed-level (BL-Touch)
+M500
+M420 S1;
 G92 E0 ; Reset Extruder
 M117 Getting the extruder up to temp!
 M104 S{material_print_temperature_layer_0} ; Set Extruder temperature
